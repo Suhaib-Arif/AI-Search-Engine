@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Googleplex</title>
+    <link href = {{url_for('static', filename = 'images/globe2.svg')}} rel="icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href = {{url_for('static', filename = "styles.css")}} rel="stylesheet">
+</head>
+<body style="background-image:url({{back_image}}); background-size: cover;">
+<div >
+    <div class="text-center form-outline"><!-- style="background-color:white; background-clip:content-box;"> -->
+        <form class="p-3 container-md" action="{{url_for('home_page')}}" method="post" style="backdrop-filter:blur(3px)">
+            <img src = {{url_for('static', filename="images/G-removebg-preview__2___1_-removebg-preview.png")}} class="p-3" id="googolpleximg">
+            <div class="input-group container-fluid" style="width:35%;">
+                <span class="input-group-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-fill" viewBox="0 0 16 16">
+                    <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z"/>
+                    </svg>
+                </span>
+                <input type="text" class="form-control container" id="Query" name="query" placeholder="Ask Query">
+                <button class="btn btn-secondary" type="submit" id="button-addon2">Ask</button>
+            </div>
+        </form>
+        <textarea readonly class="form-control container" id="textAreaExample3" style="width:28%" rows="8">{{reply}}</textarea>
+
+    </div>
+</div>
+</body>
+</html>
