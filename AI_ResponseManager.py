@@ -26,3 +26,14 @@ class AI_Manager:
 
         return reply
 
+    def generate_image(self,description):
+
+        response = openai.Image.create(
+            prompt=description,
+            n=1,
+            size="1024x1024"
+        )
+
+        image = response['data'][0]['url']
+
+        return image
